@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "types": ["jest", "node"]
+    // 其他编译选项...
+  },
+  "include": ["**/*.test.ts", "**/*.test.tsx"],
+  "exclude": ["node_modules"]
+}
