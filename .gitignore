@@ -1,11 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# test
-jest.config.js
-/__tests__
-tsconfig.test.json
-setupTests
-
 # dependencies
 /node_modules
 /.pnp
@@ -29,7 +23,6 @@ setupTests
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
 
 # local env files
 .env*.local
