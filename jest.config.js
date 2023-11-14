@@ -1,21 +1,14 @@
-module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  moduleNameMapper: {
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-  },
-  testPathIgnorePatterns: [
-    '<rootDir>/.next/',
-    '<rootDir>/node_modules/',
-    '<rootDir>/path/to/ignored/tests',
-  ],
-  setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-  },
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.test.json',
-    },
-  },
-};
+const nextJest = require("next/jest")
+
+const createJestConfig = nextJest({
+  dir: "./",
+})
+
+const customJestConfig = {
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  testEnvironment: "jest-environment-jsdom",
+  modulePathIgnorePatterns: ["<rootDir>/dist/"],
+  testPathIgnorePatterns: ["<rootDir>/e2e"],
+}
+
+module.exports = createJestConfig(customJestConfig)
