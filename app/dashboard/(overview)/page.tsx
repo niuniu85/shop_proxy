@@ -9,6 +9,7 @@ import {
   LatestInvoicesSkeleton,
   RevenueChartSkeleton,
 } from "@/app/ui/skeletons";
+import XmlList from "@/app/ui/dashboard/xml-list";
 
 export default async function Page() {
   const {

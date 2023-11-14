@@ -1,0 +1,15 @@
+{
+    "functions": {
+      "api/getData.js": {
+        "runtime": "nodejs14.x",
+        "memory": 128
+      }
+    },
+    "rewrites": [
+      {
+        "source": "/api/getData",
+        "destination": "/api/getData.js"
+      }
+    ]
+  }
+  
