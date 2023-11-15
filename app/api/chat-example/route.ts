@@ -5,9 +5,7 @@ import { OpenAIStream, StreamingTextResponse } from "ai";
 export const runtime = "edge";
 
 const openai = new OpenAI({
-  apiKey:
-    process.env.OPEN_API_KEY ||
-    "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",
+  apiKey: "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",
 });
 // This method must be named GET
 export async function GET() {
