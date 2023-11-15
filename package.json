@@ -4,6 +4,7 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
+    "lint": "next lint",
     "test": "cross-env FORCE_COLOR=1 jest --passWithNoTests",
     "e2e:headless": "playwright test",
     "e2e:ui": "playwright test --ui",
