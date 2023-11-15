@@ -1,11 +1,11 @@
 import { expect, test } from "@playwright/test";
 
 test("has element with text", async ({ page }) => {
-  await page.goto("./");
+  await page.goto("./dashboard/xmllist");
 
   // Replace 'your-selector' with the actual selector of the element you want to check
   const element = await page.$(
-    "strong"
+    "h1"
   );
 
   // Ensure the element is found
@@ -16,6 +16,6 @@ test("has element with text", async ({ page }) => {
     const elementText = await element.textContent();
 
     // Check if the text content matches the expected value
-    await expect(elementText).toBe("Welcome to Acme.");
+    await expect(elementText).toBe("My Next.js App");
   }
 });
